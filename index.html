@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BD House Planning & Construction | Architectural & Engineering Consultancy Bangladesh</title>
+  <meta name="description" content="BD House Planning & Construction provides modern duplex house design, 2D floor plans, 3D exterior renderings, BNBC structural engineering, and construction material estimation in Bangladesh. Call Hotline: 01707570450.">
+  <meta name="keywords" content="house design bd, duplex house design bangladesh, 3 bedroom house plan, tin shed house design, construction cost calculator bd, architectural floor plan, structural engineering dhaka">
+  
+  <!-- FontAwesome & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-info">
+        <span><i class="fa-solid fa-phone"></i> HotLine: <strong style="color:var(--secondary);">01707570450</strong></span>
+        <span><i class="fa-solid fa-envelope"></i> info@bdhouseplanning.com</span>
+        <span><i class="fa-solid fa-location-dot"></i> Dhaka & All 64 Districts, Bangladesh</span>
+      </div>
+      <div class="top-info">
+        <span><i class="fa-solid fa-shield-halved"></i> BNBC 2020 Compliant Structural Designs</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">BD</div>
+        <div class="logo-text">
+          <h2>BD HOUSE PLANNING</h2>
+          <span>& CONSTRUCTION CONSULTANCY</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#calculator">Cost Estimator</a></li>
+        <li><a href="#catalog">House Designs</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <a href="https://wa.me/8801707570450?text=Hello%20BD%20House%20Planning,%20I%20want%20to%20consult%20for%20my%20house%20design." target="_blank" class="btn btn-secondary">
+          <i class="fa-brands fa-whatsapp"></i> 01707570450
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="badge">
+          <i class="fa-solid fa-award"></i> Premier Architectural & Engineering Studio in Bangladesh
+        </div>
+        <h1>Turn Your Dream House Into Architectural Reality</h1>
+        <p>Expert 2D Floor Plans, 3D Exterior Elevation, Structural Load Calculations, Plumbing-Electrical Drawings, and Accurate Material Budget Estimation across Bangladesh.</p>
+        
+        <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+          <a href="#catalog" class="btn btn-primary">
+            <i class="fa-solid fa-compass-drafting"></i> Explore House Plans
+          </a>
+          <a href="#calculator" class="btn btn-secondary">
+            <i class="fa-solid fa-calculator"></i> Calculate Construction Cost
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3>1,500+</h3>
+            <p>House Plans Delivered</p>
+          </div>
+          <div class="stat-item">
+            <h3>64</h3>
+            <p>Districts Covered</p>
+          </div>
+          <div class="stat-item">
+            <h3>100%</h3>
+            <p>BNBC Code Compliant</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-img-wrapper">
+          <img src="assets/images/hero_duplex.png" alt="Luxury Duplex House Design Bangladesh">
+        </div>
+        <div class="hero-floating-card">
+          <div class="floating-icon">
+            <i class="fa-solid fa-house-chimney-check"></i>
+          </div>
+          <div>
+            <h4 style="font-size:1rem; margin-bottom:0.1rem;">Duplex & Multi-Story Experts</h4>
+            <p style="font-size:0.8rem; color:var(--text-secondary); margin:0;">Complete 3D Renderings & Floor Drawings</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BD Construction Cost & Material Calculator -->
+  <section class="section-padding calculator-section" id="calculator">
+    <div class="container">
+      <div class="text-center">
+        <div class="badge">
+          <i class="fa-solid fa-calculator"></i> Instant Estimator
+        </div>
+        <h2 class="section-title">Bangladesh Construction Cost & Material Estimator</h2>
+        <p class="section-subtitle">Calculate estimated Cement, Rebar Steel, Bricks, Sand, Aggregate, and Total Construction Budget instantly based on standard BD market rates.</p>
+      </div>
+
+      <div class="calc-card">
+        <div class="calc-grid">
+          <div class="calc-inputs">
+            <h3><i class="fa-solid fa-sliders"></i> Enter Building Specifications</h3>
+            
+            <div class="form-group">
+              <label>Built-up Area per Floor (Sq. Ft.):</label>
+              <div class="range-wrap">
+                <input type="range" id="calcArea" min="500" max="4000" step="50" value="1200">
+                <span class="range-val" id="areaVal">1200 Sq. Ft.</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Number of Floors:</label>
+              <select id="calcFloors" class="form-control">
+                <option value="1">1 Story (Ground Floor)</option>
+                <option value="2" selected>2 Stories (Duplex / 2-Tola)</option>
+                <option value="3">3 Stories (3-Tola)</option>
+                <option value="4">4 Stories (4-Tola)</option>
+                <option value="5">5 Stories (5-Tola)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Structural Type:</label>
+              <select id="calcType" class="form-control">
+                <option value="rcc" selected>RCC Frame Structure (Beam, Column, Slab)</option>
+                <option value="tin">Tin Shed Structure (CGI Sheet Roof)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Finishing & Material Grade:</label>
+              <select id="calcQuality" class="form-control">
+                <option value="standard">Standard Finish (~৳1,950/sq.ft)</option>
+                <option value="semi" selected>Semi-Luxury Finish (~৳2,350/sq.ft)</option>
+                <option value="luxury">Luxury Finish (~৳2,900/sq.ft)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="calc-results">
+            <h3><i class="fa-solid fa-chart-pie"></i> Estimated Budget & Materials</h3>
+            
+            <div class="result-total">
+              <span>Estimated Construction Cost</span>
+              <h2 id="resTotalCost">৳ 56.40 Lacs</h2>
+              <small style="color:var(--text-secondary); font-size:0.8rem;" id="resSqFtRate">৳ 2,350 / Sq. Ft.</small>
+            </div>
+
+            <div class="materials-grid">
+              <div class="material-item">
+                <div class="material-icon"><i class="fa-solid fa-cubes-stacked"></i></div>
+                <div class="material-info">
+                  <p>Cement Required</p>
+                  <h4 id="resCement">1,008 Bags</h4>
+                </div>
+              </div>
+              <div class="material-item">
+                <div class="material-icon"><i class="fa-solid fa-bars-staggered"></i></div>
+                <div class="material-info">
+                  <p>Steel / Rebar (60G)</p>
+                  <h4 id="resSteel">8.64 Tons</h4>
+                </div>
+              </div>
+              <div class="material-item">
+                <div class="material-icon"><i class="fa-solid fa-border-all"></i></div>
+                <div class="material-info">
+                  <p>1st Class Bricks</p>
+                  <h4 id="resBricks">22,800 Pcs</h4>
+                </div>
+              </div>
+              <div class="material-item">
+                <div class="material-icon"><i class="fa-solid fa-dumpster"></i></div>
+                <div class="material-info">
+                  <p>Sand (Sylhet + Local)</p>
+                  <h4 id="resSand">3,000 CFT</h4>
+                </div>
+              </div>
+              <div class="material-item" style="grid-column: 1/-1;">
+                <div class="material-icon"><div class="material-icon"><i class="fa-solid fa-layer-group"></i></div></div>
+                <div class="material-info">
+                  <p>Stone Chips / Brick Khoa</p>
+                  <h4 id="resStone">2,760 CFT</h4>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top:1.5rem; text-align:center;">
+              <a href="#contact" class="btn btn-secondary" style="width:100%;">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Request Detailed Bill of Quantities (BOQ)
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- House Plans Catalog -->
+  <section class="section-padding" id="catalog">
+    <div class="container">
+      <div class="text-center">
+        <div class="badge">
+          <i class="fa-solid fa-layer-group"></i> Architectural Gallery
+        </div>
+        <h2 class="section-title">Popular House Design Plans in Bangladesh</h2>
+        <p class="section-subtitle">Explore customized floor plan drawings designed according to land size, bedroom requirements, and budget constraints.</p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="catalog-filter">
+        <button class="filter-btn active" data-filter="all">All Plans</button>
+        <button class="filter-btn" data-filter="duplex">Duplex House</button>
+        <button class="filter-btn" data-filter="single-story">Single Story</button>
+        <button class="filter-btn" data-filter="two-storied">2-Storied</button>
+        <button class="filter-btn" data-filter="three-storied">3-Storied</button>
+        <button class="filter-btn" data-filter="tin-shed">Tin Shed</button>
+        <button class="filter-btn" data-filter="interior">Interior Design</button>
+      </div>
+
+      <!-- Search Box -->
+      <div class="search-box-wrap">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search by bedrooms, plot dimension (e.g. 36' x 33'), or house type...">
+      </div>
+
+      <!-- Catalog Grid -->
+      <div class="plans-grid" id="plansGrid">
+        <!-- Rendered dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Architectural & Engineering Services -->
+  <section class="section-padding" id="services" style="background: rgba(15, 23, 42, 0.3);">
+    <div class="container">
+      <div class="text-center">
+        <div class="badge">
+          <i class="fa-solid fa-screwdriver-wrench"></i> What We Do
+        </div>
+        <h2 class="section-title">Complete Architectural & Civil Consultancy</h2>
+        <p class="section-subtitle">From digital land survey to 3D elevation rendering and structural safety certifications under BNBC regulations.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+          <h3>2D Architectural Floor Planning</h3>
+          <p>Optimized room layouts, natural light & air ventilation flow, staircase placement, furniture placement, and RAJUK / Municipality approval drawings.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-cube"></i></div>
+          <h3>3D Exterior & Interior Renderings</h3>
+          <p>Photorealistic 3D front elevation models, color matching, modern wooden & tile facades, landscaping, and virtual walkthrough animations.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-building-shield"></i></div>
+          <h3>BNBC Structural Engineering</h3>
+          <p>Earthquake-resistant RCC column, beam, footing, foundation load calculations by certified IEB Member Civil Engineers.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Plumbing & Electrical Layouts</h3>
+          <p>Complete pipe diameter schematics, septictank & water underground reservoir design, circuit breaker capacity, and lighting points.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-calculator"></i></div>
+          <h3>Construction Cost & BOQ Estimation</h3>
+          <p>Detailed material list (Cement, Steel, Bricks, Sand, Tiles, Paint) and item-by-item labor cost budget estimation to prevent overspending.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-user-gear"></i></div>
+          <h3>On-Site Construction Supervision</h3>
+          <p>Engineers visit your site during key construction phases (Footing casting, Column casting, Roof slab casting) to ensure strict quality control.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Testimonials -->
+  <section class="section-padding" id="testimonials">
+    <div class="container">
+      <div class="text-center">
+        <div class="badge">
+          <i class="fa-solid fa-comments"></i> Verified Clients
+        </div>
+        <h2 class="section-title">What House Owners Say Across Bangladesh</h2>
+        <p class="section-subtitle">Real experiences from clients in Dhaka, Chittagong, Sylhet, Comilla, Bogra, and Mymensingh.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="client-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>"BD House Planning created a fantastic 4-bedroom duplex design for my plot in Sylhet. Their 3D exterior rendering was exact and their material estimate saved me nearly 3 Lacs BDT!"</p>
+          <div class="client-info">
+            <div class="client-avatar">MA</div>
+            <div class="client-details">
+              <h4>Md. Al-Amin</h4>
+              <span>Sylhet Sadar, Duplex Owner</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="client-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>"Very cooperative engineers! I got my 2-story floor plan, structural drawing, and electrical drawing delivered on time for my Cumilla home. Highly recommended!"</p>
+          <div class="client-info">
+            <div class="client-avatar">KH</div>
+            <div class="client-details">
+              <h4>Engr. Khorshed Alam</h4>
+              <span>Cumilla, 2-Story Building Owner</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="client-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>"Loved their low-cost tin-shed 3 bedroom design for my ancestral land in Gazipur. Excellent ventilation and elegant veranda layout!"</p>
+          <div class="client-info">
+            <div class="client-avatar">RA</div>
+            <div class="client-details">
+              <h4>Rafiqul Islam</h4>
+              <span>Gazipur, Tin Shed House</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Booking Section -->
+  <section class="section-padding" id="contact" style="background: rgba(15, 23, 42, 0.4);">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <div class="badge">
+            <i class="fa-solid fa-headset"></i> Get In Touch
+          </div>
+          <h2 class="section-title">Ready to Plan Your New Dream House?</h2>
+          <p style="color:var(--text-secondary);">Contact our expert team of senior architects and civil engineers today for a free consultation or custom plan quote.</p>
+
+          <div class="contact-info-cards">
+            <div class="info-card">
+              <div class="info-icon"><i class="fa-solid fa-phone-volume"></i></div>
+              <div>
+                <h4 style="font-size:0.95rem;">HotLine & WhatsApp</h4>
+                <p style="margin:0; font-weight:700; color:var(--secondary);">01707570450</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <h4 style="font-size:0.95rem;">Official Email</h4>
+                <p style="margin:0; font-weight:600;">info@bdhouseplanning.com</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <h4 style="font-size:0.95rem;">Working Hours</h4>
+                <p style="margin:0; color:var(--text-secondary);">Sat - Thu: 9:00 AM - 8:00 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <h3><i class="fa-solid fa-paper-plane" style="color:var(--secondary);"></i> Request Free Consultation</h3>
+          <form id="contactForm" style="margin-top:1.5rem;">
+            <div class="form-group">
+              <label>Your Full Name *</label>
+              <input type="text" class="form-control" placeholder="e.g. Md. Tanvir Hossain" required>
+            </div>
+            <div class="form-group">
+              <label>Mobile Number *</label>
+              <input type="tel" class="form-control" placeholder="01712345678" required>
+            </div>
+            <div class="form-group">
+              <label>Project Location / District *</label>
+              <input type="text" class="form-control" placeholder="e.g. Bogra / Dhaka / Chittagong" required>
+            </div>
+            <div class="form-group">
+              <label>Plot Size & Requirements</label>
+              <textarea class="form-control" rows="3" placeholder="e.g. 3.5 Katha land, want a 4-bedroom duplex house plan..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;">
+              <i class="fa-solid fa-paper-plane"></i> Send Inquiry & Get Callback
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plan Details Modal -->
+  <div class="modal-backdrop" id="planModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+      <h3 id="modalTitle" style="font-size:1.5rem; color:var(--secondary);">House Plan Detail</h3>
+      <div id="modalContent">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/8801707570450?text=Hello%20BD%20House%20Planning,%20I%20need%20a%20house%20plan." class="floating-whatsapp" target="_blank" title="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo" style="margin-bottom:1rem;">
+            <div class="logo-icon">BD</div>
+            <div class="logo-text">
+              <h2>BD HOUSE PLANNING</h2>
+              <span>& CONSTRUCTION</span>
+            </div>
+          </div>
+          <p>Leading architectural, floor planning, 3D modeling, structural engineering, and construction estimation consultancy serving all 64 districts in Bangladesh.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>House Categories</h4>
+          <ul class="footer-links">
+            <li><a href="#catalog">Duplex House Design</a></li>
+            <li><a href="#catalog">Single Story House</a></li>
+            <li><a href="#catalog">2-Storied House Plan</a></li>
+            <li><a href="#catalog">Tin Shed House Design</a></li>
+            <li><a href="#catalog">Interior Design</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#calculator">Construction Calculator</a></li>
+            <li><a href="#services">Our Engineering Services</a></li>
+            <li><a href="#testimonials">Client Reviews</a></li>
+            <li><a href="#contact">Hotline Consultation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Information</h4>
+          <p style="margin-bottom:0.5rem;"><i class="fa-solid fa-phone" style="color:var(--secondary);"></i> HotLine: 01707570450</p>
+          <p style="margin-bottom:0.5rem;"><i class="fa-solid fa-envelope" style="color:var(--secondary);"></i> info@bdhouseplanning.com</p>
+          <p><i class="fa-solid fa-location-dot" style="color:var(--secondary);"></i> House 14, Road 5, Dhanmondi, Dhaka, Bangladesh</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 BD House Planning & Construction. All Rights Reserved.</p>
+        <div>
+          <a href="#" style="color:#94A3B8; text-decoration:none; margin-left:1rem;">Privacy Policy</a>
+          <a href="#" style="color:#94A3B8; text-decoration:none; margin-left:1rem;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
