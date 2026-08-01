@@ -390,7 +390,7 @@ function initContactForm() {
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     contactForm.reset();
-    showToast('Your request has been submitted successfully! Hotline: 01707570450');
+    showToast('Your request has been submitted successfully! Hotline & WhatsApp: +8801722799930');
   });
 }
 
