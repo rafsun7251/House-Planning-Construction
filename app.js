@@ -1,4 +1,4 @@
-// BD House Planning & Construction - Application Logic
+// House Planning & Construction - Application Logic
 
 // House Plans Dataset
 const housePlans = [
